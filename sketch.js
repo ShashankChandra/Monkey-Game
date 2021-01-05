@@ -9,7 +9,7 @@ var Survival;
 function preload(){
   
   
-  monkey_running =            loadAnimation("sprite_0.png","sprite_1.png","sprite_2.png","sprite_3.png","sprite_4.png","sprite_5.png","sprite_6.png","sprite_7.png","sprite_8.png")
+  monkey_running = loadAnimation("sprite_0.png","sprite_1.png","sprite_2.png","sprite_3.png","sprite_4.png","sprite_5.png","sprite_6.png","sprite_7.png","sprite_8.png")
   
   bananaImage = loadImage("banana.png");
   obstacleImage = loadImage("obstacle.png");
@@ -46,13 +46,19 @@ function draw() {
   
   monkey.collide(ground);
   
-  if(keyDown("space") && (monkey.y>313))
+  if(keyDown("space"))
     {
       monkey.velocityY=-15;
     }
   
     monkey.velocityY = monkey.velocityY+0.8;
   
+  if(foodGroup.isTouching(monkey))
+  {
+   foodGroup.destroyEach();
+    score=score+2;
+    
+  }
 
   if(frameCount%80===0)
     {
