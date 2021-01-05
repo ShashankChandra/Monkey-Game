@@ -20,6 +20,7 @@ function preload(){
 
 function setup() {
 createCanvas(600,600);
+score=0;
 monkey = createSprite(80,315,20,20);
 monkey.addAnimation("running",monkey_running);
 monkey.scale=0.1;
