@@ -1,15 +1,15 @@
 
-var monkey , monkey_running
-var banana ,bananaImage, obstacle, obstacleImage
-var foodGroup, obstacleGroup
-var score
+var monkey , monkey_running;
+var banana ,bananaImage, obstacle, obstacleImage;
+var foodGroup, obstacleGroup;
+var score;
 var ground;
 var Survival;
 
 function preload(){
   
   
-  monkey_running = loadAnimation("sprite_0.png","sprite_1.png","sprite_2.png","sprite_3.png","sprite_4.png","sprite_5.png","sprite_6.png","sprite_7.png","sprite_8.png")
+  monkey_running = loadAnimation("sprite_0.png","sprite_1.png","sprite_2.png","sprite_3.png","sprite_4.png","sprite_5.png","sprite_6.png","sprite_7.png","sprite_8.png");
   
   bananaImage = loadImage("banana.png");
   obstacleImage = loadImage("obstacle.png");
@@ -63,7 +63,7 @@ function draw() {
 
   if(frameCount%80===0)
     {
-      banana = createSprite(350,Math.round(random(170,200)),20,20)
+      banana = createSprite(350,Math.round(random(170,200)),20,20);
       banana.addImage(bananaImage);
       banana.scale=0.1;
       banana.velocityX=-4;
@@ -75,7 +75,7 @@ function draw() {
   
   if(frameCount%300===0)
     {
-      obstacle = createSprite(350,310,20,20)
+      obstacle = createSprite(350,310,20,20);
       obstacle.addImage(obstacleImage);
       obstacle.scale=0.2;
       obstacle.velocityX=-6;
